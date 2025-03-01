@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interactive Typography Page</title>
+    <!-- Sets viewport to the device screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--Link an external style sheet-->
+    <link href="../../styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+<style>
+    iframe {
+        width: 600px !important;
+        height: 645px !important;
+        transform: scale(0.6);
+        transform-origin: top left;
+        margin-top: 15px;
+    }
+
+    .contents {
+        margin-top: 20px;
+    }
+
+    td, .contents {
+        justify-content: center;
+    }
+
+    .contents a {
+        color: black;
+    }
+
+    .contents tr, td, table {
+        margin-left: 250px !important;
+    }
+    
+</style>
+<!-- body -->
+<body>
+    <main>
+        <section>
+            <div class="icons">
+                <figure>
+                    <a href="../../about_me.html"><img src="../../images/profile_picture.png" alt="Profile Picture Icon" class="profile"></a>
+                    <figcaption>About Me</figcaption>
+                </figure>
+                <figure>
+                    <a href="../../projects.html"><img src="../../images/folder_icon_click.png" alt="Projects Folder"></a>
+                    <figcaption>Projects</figcaption>
+                </figure>
+            </div>
+            <div class="projects">
+                <div class="title3">
+                    <p>Projects</p>
+                    <p class="x" onclick="document.querySelector('.projects').style.visibility='hidden';">X</p>
+                </div>
+                <div class="folders">
+                    <div><a href="../games.html"><img src="../../images/folder_icon.png" alt="Game Projects Folder" class="projects_folders"></a><figcaption>Games</figcaption></div>
+                    <div><a href="../motion_graphics.html"><img src="../../images/folder_icon.png" alt="Motion Graphics Projects Folder" class="projects_folders"></a><figcaption>Motion Graphics</figcaption></div>
+                    <div><a href="../cc.html"><img src="../../images/folder_icon.png" alt="CC Projects Folder" class="projects_folders"></a><figcaption>p5.js</figcaption></div>
+                    <div><a href="../websites.html"><img src="../../images/folder_icon.png" alt="Websites Projects Folder" class="projects_folders"></a><figcaption>Websites</figcaption></div>
+                </div>
+            </div>
+            <div class="sub_projects">
+                <div class="title2">
+                    <p>Advanced CC</p>
+                    <p class="x" onclick="document.querySelector('.sub_projects').style.visibility='hidden';">X</p>
+                </div>
+                <div class="individual_projects">
+                    <div><a href="typography_prototypes.html">
+                        <img src="assets/typography.png">
+                    </a>
+                    <figcaption>Interactive Typography Prototypes</figcaption></div>
+                    <div><a href="typography.html">
+                        <img src="assets/typography_final.png" style="outline: 10px var(--hotPink) solid">
+                    </a>
+                    <figcaption>Interactive Typography</figcaption></div>
+                </div>
+            </div>
+            <div class="description">
+                <div class="title2">
+                    <p>Interactive Typography: Glitch, Blur, Flicker.txt</p>
+                    <p class="x" onclick="document.querySelector('.description').style.visibility='hidden';">X</p>
+                </div>
+                <table class="contents" style="height: 56vh">
+                    <tr>
+                        <td>
+                            <a href="https://editor.p5js.org/liaimv/full/pDkBSrYoU" target="_blank">Glitch (Link)</a>
+                            <iframe src="https://editor.p5js.org/liaimv/full/pDkBSrYoU" ></iframe>
+                        </td>
+                        <td>
+                            <a href="https://editor.p5js.org/liaimv/full/jUxcvURCg" target="_blank">Blur (Link)</a>
+                            <iframe src="https://editor.p5js.org/liaimv/full/jUxcvURCg"></iframe>
+                        </td>
+                        <td>
+                            <a href="https://editor.p5js.org/liaimv/full/JJI4xxM-f" target="blank">Flicker (Link)</a>
+                            <iframe src="https://editor.p5js.org/liaimv/full/JJI4xxM-f"></iframe>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><a href="../../index.html" class="name">lia's computer</a></p>
+        <ul>
+            <li>20:30</li>
+            <li>2003/01/03</li>
+        </ul>
+    </footer>
+</body>
+</html>
+
+
+

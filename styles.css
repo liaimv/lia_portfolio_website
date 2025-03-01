@@ -1,0 +1,542 @@
+/*Variables*/
+:root {
+    --lightPink: #fcc2d0;
+    --pink: rgba(238, 151, 200, 0.7);
+    --hotPink: #e94471;
+    --pinkSolid: #EE97C8;
+}
+
+/*Layout*/
+html, body {
+    cursor: url(images/mouse_icon.png), url(images/mouse_small.png), url(images/mouse_tiny.png), auto;
+}
+
+a, .x {
+    cursor: url(images/click_icon.png) 15 0, url(images/click_small.png) 10 0, url(images/click_tiny.png) 5 0, pointer;
+}
+
+.x {
+    color: white;
+}
+
+.x:hover {
+        color: var(--pinkSolid);
+}
+
+section {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: auto auto;
+    padding: 0;
+}
+
+body {
+    background-image: url(images/sky_background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    margin: 20px 0 80px 0px;
+    padding: 0;
+    font-family: 'Anonymous Pro', sans-serif;
+    font-size: 20px;
+    min-height: 100vh;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    z-index: -5;
+}
+
+/*Icons*/
+.icons {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+    .icons img {
+        display: block;
+        width: 100%;
+    }
+
+    .icons figcaption {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+.profile:hover {
+    content: url('images/profile_picture_click.png');
+}
+
+/*About Me Photo*/
+.about {
+    margin-top: 15px;
+    margin-left: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: fit-content;
+}
+
+    .about > * {
+        grid-column: 2;
+        grid-row: 1;
+        background: var(--pink);
+        outline: 5px black solid;
+        padding: 10px;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+.title {
+    display: flex;
+    color: white;
+    background: black;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    font-size: 25px;
+    height: 25px;
+}
+
+/*About Me Background*/
+.background {
+    grid-column: 3;
+    grid-row: 1;
+    background: var(--pink);
+    outline: 5px black solid;
+    width: fit-content;
+    height: fit-content;
+    margin-left: -40px;
+}
+
+.title2, .title3 {
+    display: flex;
+    color: white;
+    background: black;
+    justify-content: space-between;
+    font-size: 25px;
+    height: 35px;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+    .title2 p, .title3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+.background table {
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.background td {
+    padding: 5px;
+}
+
+.table_title, .social_title {
+    font-weight: bold;
+    font-size: 20px;
+    border-right: 1px black solid;
+}
+
+.table_title {
+    border-bottom: 1px black solid;
+}
+
+.table_des {
+    border-bottom: 1px black solid;
+}
+
+.links {
+    display: flex;
+    border-left: none;
+}
+
+    .links img {
+        display: flex;
+        width: 50%;
+    }
+
+/*Skills*/
+.skills {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    background: var(--pink);
+    outline: 5px black solid;
+    width: 94%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.details {
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+}
+
+.parts {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    width: fit-content;
+    padding-bottom: 20px;
+}
+
+    .parts h1 {
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .parts table {
+        font-size: 20px;
+        list-style: none;
+        display: flex;
+        padding-right: 22px;
+        padding-left: 22px;
+    }
+
+    .parts td {
+        padding-right: 20px;
+    }
+
+    .parts:nth-child(2) {
+        border-left: 1px black solid;
+        border-right: 1px black solid;
+        width: auto;
+        align-items: center;
+    }
+
+/*Projects Folders*/
+.projects {
+    grid-column: 2;
+    grid-row: 1;
+    background: rgba(0, 0, 0, 0.7);
+    outline: 5px var(--pinkSolid) solid;
+    width: 31vw;
+    height: 48vh;
+    margin: 22px 40px 0px 0px;
+    color: white;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-color: var(--hotPink) var(--pinkSolid);
+    margin-bottom: 10px;
+}
+
+    .projects p {
+        color: black;
+    }
+
+    .projects .x:hover {
+        color: white;
+    }
+
+.title3 {
+    display: flex;
+    color: black;
+    background: var(--pinkSolid);
+    justify-content: space-between;
+    font-size: 25px;
+    height: 35px;
+    align-items: center;
+    padding-bottom: 5px;
+    top: 0;
+    position: sticky;
+}
+
+    .title3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+.folders, .individual_projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 10px;
+    margin-top: 25px;
+}
+    .folders:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .folders > * {
+        margin-bottom: 25px;
+    }
+
+    .folders a, .individual_projects a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .folders img {
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .folders figcaption {
+        text-align: center;
+        margin-top: 10px;
+    }
+.projects_folders:hover {
+    content: url(images/folder_icon_click.png);
+}
+/*Games Folder*/
+.sub_projects {
+    grid-column: 3;
+    grid-row: 1;
+    background: var(--pink);
+    outline: 5px black solid;
+    width: 48vw;
+    height: 48vh;
+    margin: 22px 40px 0px 0px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-color: white black;
+    margin-bottom: 10px;
+}
+
+.title2 {
+    display: flex;
+    color: white;
+    background: black;
+    justify-content: space-between;
+    font-size: 25px;
+    height: 35px;
+    align-items: center;
+    padding-bottom: 5px;
+    top: 0;
+    position: sticky;
+}
+
+    .title2 p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+.individual_projects {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.individual_projects figcaption {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.individual_projects img {
+    height: 10vw;
+    object-fit: cover;
+    margin: 20px 30px;
+    object-fit: cover;
+    outline: 10px white solid;
+}
+
+    .individual_projects img:hover {
+        outline: 10px var(--hotPink) solid;
+    }
+
+/*One Work*/
+.description {
+    background: var(--pink);
+    outline: 5px black solid;
+    margin: 40px;
+    margin-top: 25px;
+    height: fit-content;
+    grid-column: 1 / 4;
+    grid-row: 2;
+}
+
+.contents {
+    display: grid;
+    grid-template-columns: repeat(1fr 1fr);
+    align-items: center;
+    margin: 0px 20px 20px 20px;
+    margin-top: 0px;
+}
+
+    .contents a {
+        margin: 20px;
+        font-size: 30px;
+        width: fit-content;
+    }
+
+        .contents a:link, .contents a:visited {
+            color: black;
+        }
+
+        .contents a:hover {
+            color: white;
+        }
+
+    .contents img {
+        display: block;
+        width: 100%;
+        margin: 20px;
+        margin-top: 0;
+        padding: 0;
+        grid-column: 1;
+    }
+
+.text {
+    display: block;
+    grid-column: 2;
+    margin: 0px 0px 20px 40px;
+    padding: 0px 20px 0px 20px;
+}
+
+    .text li {
+        padding: 3px;
+    }
+
+    .contents iframe {
+        width: 600px;
+        height: 400px;
+        margin: 20px 0;
+        display: block;
+        grid-column: 1;
+    }
+
+/*Footer*/
+footer {
+    position: fixed;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: black;
+    align-items: center;
+    width: 100%;
+    color: var(--pinkSolid);
+}
+
+.name {
+    text-decoration: none;
+    color: var(--pinkSolid);
+}
+
+    .name:hover {
+        color: white;
+    }
+
+footer p {
+    grid-column: 1;
+    font-size: 50px;
+    margin: 0px;
+    padding-left: 20px;
+    font-family: 'Tiny5', sans-serif;
+    text-transform: uppercase;
+}
+
+footer ul {
+    grid-column: 2;
+}
+
+footer li {
+    list-style: none;
+    text-align: right;
+    margin-right: 20px;
+    padding: 2px;
+    font-size: 20px;
+}
+/* Overrides desktop style when viewport is less than 600px (for smart phones) */
+@media only screen and (max-width: 600px) {
+    section {
+        display: block;
+    }
+
+    body {
+        margin-top: 0px;
+        margin-bottom: 100px;
+        background-image: url(images/sky_long.png);
+    }
+
+    .icons {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about, .background, .skills {
+        width: 90%;
+        height: fit-content;
+        margin: 30px auto;
+        padding: 0;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+        .about > * {
+            width: 50%;
+        }
+
+    .skills, .details {
+        flex-direction: column;
+    }
+
+    .parts, .parts:nth-child(2) {
+        border: none;
+        margin: 20px;
+        width: 100%;
+    }
+
+        .parts table {
+            justify-content: center;
+        }
+
+    .details {
+        margin: 0;
+    }
+
+    .projects, .sub_projects, .description {
+        width: 90%;
+        height: fit-content;
+        margin: 30px auto;
+        padding: 0;
+    }
+
+    .contents {
+        padding: 0px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .individual_projects img {
+        height: 25vw;
+    }
+
+    .individual_projects figcaption {
+        font-size: 4vw;
+    }
+
+    .text {
+        margin: 0px;
+    }
+
+    footer p {
+        font-size: 30px;
+    }
+
+    footer li {
+        font-size: 15px;
+    }
+}

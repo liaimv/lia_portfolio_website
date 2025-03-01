@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio Page</title>
+    <!-- Sets viewport to the device screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--Link an external style sheet-->
+    <link href="../../styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+<!-- body -->
+<body>
+    <main>
+        <section>
+            <div class="icons">
+                <figure>
+                    <a href="../../about_me.html"><img src="../../images/profile_picture.png" alt="Profile Picture Icon" class="profile"></a>
+                    <figcaption>About Me</figcaption>
+                </figure>
+                <figure>
+                    <a href="../../projects.html"><img src="../../images/folder_icon_click.png" alt="Projects Folder"></a>
+                    <figcaption>Projects</figcaption>
+                </figure>
+            </div>
+            <div class="projects">
+                <div class="title3">
+                    <p>Projects</p>
+                    <p class="x" onclick="document.querySelector('.projects').style.visibility='hidden';">X</p>
+                </div>
+                <div class="folders">
+                    <div><a href="../games.html"><img src="../../images/folder_icon.png" alt="Game Projects Folder" class="projects_folders"></a><figcaption>Games</figcaption></div>
+                    <div><a href="../motion_graphics.html"><img src="../../images/folder_icon.png" alt="Motion Graphics Projects Folder" class="projects_folders"></a><figcaption>Motion Graphics</figcaption></div>
+                    <div><a href="../cc.html"><img src="../../images/folder_icon.png" alt="CC Projects Folder" class="projects_folders"></a><figcaption>p5.js</figcaption></div>
+                    <div><a href="../websites.html"><img src="../../images/folder_icon_click.png" alt="Websites Projects Folder" class="projects_folders"></a><figcaption>Websites</figcaption></div>
+                </div>
+            </div>
+            <div class="sub_projects">
+                <div class="title2">
+                    <p>Websites</p>
+                    <p class="x" onclick="document.querySelector('.sub_projects').style.visibility='hidden';">X</p>
+                </div>
+                <div class="individual_projects">
+                    <div><a href="error.html">
+                        <img src="assets/Error.png">
+                    </a>
+                    <figcaption>Error Website</figcaption></div>
+                    <div><a href="portfolio.html">
+                        <img src="assets/Portfolio.png">
+                    </a>
+                    <figcaption>Portfolio Website</figcaption></div>
+                    <div><a href="js_homepage.html">
+                        <img src="assets/JS Homepage.png" style="outline: 10px var(--hotPink) solid">
+                    </a>
+                    <figcaption>Javascript 2025 Homepage</figcaption></div>
+                    <div><a href="III_website.html">
+                        <img src="assets/III Website.png">
+                    </a>
+                    <figcaption>III Website</figcaption></div>
+                </div>
+            </div>
+            <div class="description">
+                <div class="title2">
+                    <p>Javascript 2025 Homepage.txt</p>
+                    <p class="x" onclick="document.querySelector('.description').style.visibility='hidden';">X</p>
+                </div>
+                <div class="contents">
+                    <a href="https://liaimv.github.io/CD-Javascript-2025/" target="_blank">Javascript 2025 Homepage (Link)</a>
+                    <img src="assets/JS Homepage.png">
+                    <div class="text">
+                        <h1>Used</h1>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                        <h1>Description</h1>
+                        <p>This is a website I created to showcase the websites I created for my Javascript class. I wanted it to look like the start screen of a retro game.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><a href="../../index.html" class="name">lia's computer</a></p>
+        <ul>
+            <li>20:30</li>
+            <li>2003/01/03</li>
+        </ul>
+    </footer>
+</body>
+</html>
+
+
+

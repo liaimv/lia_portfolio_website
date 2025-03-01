@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects Page</title>
+    <!-- Sets viewport to the device screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+<style>
+    /*Variables*/
+    :root {
+        --lightPink: #fcc2d0;
+        --pink: rgba(238, 151, 200, 0.7);
+        --hotPink: #e94471;
+        --pinkSolid: #EE97C8;
+    }
+
+    /*Layout*/
+    html, body {
+        cursor: url(images/icons/mouse_icon.png), url(images/icons/mouse_small.png), url(images/icons/mouse_tiny.png), auto;
+    }
+
+    a, .x {
+        cursor: url(images/icons/click_icon.png) 15 0, url(images/icons/click_small.png) 10 0, url(images/icons/click_tiny.png) 5 0, pointer;
+    }
+
+    .x {
+        color: white;
+    }
+
+        .x:hover {
+            color: var(--pinkSolid);
+        }
+
+    body {
+        background-image: url(images/sky_background.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+        margin: 20px 0 80px 0px;
+        font-family: 'Anonymous Pro', sans-serif;
+        font-size: 20px;
+        min-height: 100vh;
+    }
+
+
+    section {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2fr 2fr 5fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /*Icons*/
+    .icons {
+        text-align: center;
+        grid-column: 1;
+        grid-row: 1;
+        width: 75%;
+    }
+
+        .icons img {
+            display: block;
+            width: 100%
+        }
+
+        .icons figcaption {
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+    .projects_folder:hover {
+        content: url('images/folder_icon_click.png');
+    }
+
+    /*About Me Photo*/
+    .about {
+        margin-top: 15px;
+        margin-left: -40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: fit-content;
+    }
+
+        .about > * {
+            grid-column: 2;
+            grid-row: 1;
+            background: var(--pink);
+            outline: 5px black solid;
+            padding: 10px;
+            margin-top: 5px;
+            width: 100%;
+        }
+
+    .title {
+        display: flex;
+        color: white;
+        background: black;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        justify-content: space-between;
+        font-size: 25px;
+        height: 25px;
+    }
+
+    /*About Me Background*/
+    .background {
+        grid-column: 3;
+        grid-row: 1;
+        background: var(--pink);
+        outline: 5px black solid;
+        width: fit-content;
+        height: fit-content;
+        margin-left: -40px;
+    }
+
+    .title2, .title3 {
+        display: flex;
+        color: white;
+        background: black;
+        justify-content: space-between;
+        font-size: 25px;
+        height: 35px;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+
+        .title2 p, .title3 p {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+    .background table {
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+
+    .background td {
+        padding: 5px;
+    }
+
+    .table_title, .social_title {
+        font-weight: bold;
+        font-size: 20px;
+        border-right: 1px black solid;
+    }
+
+    .table_title {
+        border-bottom: 1px black solid;
+    }
+
+    .table_des {
+        border-bottom: 1px black solid;
+    }
+
+    .links {
+        display: flex;
+        border-left: none;
+    }
+
+        .links img {
+            display: flex;
+            width: 50%;
+        }
+
+    /*Skills*/
+    .skills {
+        grid-column: 1 / 4;
+        grid-row: 2;
+        background: var(--pink);
+        outline: 5px black solid;
+        width: 94%;
+        height: fit-content;
+        margin: auto;
+        margin-top: 25px;
+    }
+
+    .details {
+        display: flex;
+        width: 95%;
+        justify-content: space-around;
+    }
+
+    .parts {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        width: fit-content;
+        padding-bottom: 20px;
+    }
+
+        .parts h1 {
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        .parts table {
+            font-size: 20px;
+            list-style: none;
+            display: flex;
+            padding-right: 22px;
+            padding-left: 22px;
+        }
+
+        .parts td {
+            padding-right: 20px;
+        }
+
+        .parts:nth-child(2) {
+            border-left: 1px black solid;
+            border-right: 1px black solid;
+            width: auto;
+            align-items: center;
+        }
+
+    /*Footer*/
+    footer {
+        position: fixed;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background: black;
+        align-items: center;
+        width: 100%;
+        color: var(--pinkSolid);
+    }
+
+    .name {
+        text-decoration: none;
+        color: var(--pinkSolid);
+    }
+
+        .name:hover {
+            color: white;
+        }
+
+    footer p {
+        grid-column: 1;
+        font-size: 50px;
+        margin: 0px;
+        padding-left: 20px;
+        font-family: 'Tiny5', sans-serif;
+        text-transform: uppercase;
+    }
+
+    footer ul {
+        grid-column: 2;
+    }
+
+    footer li {
+        list-style: none;
+        text-align: right;
+        margin-right: 20px;
+        padding: 2px;
+        font-size: 20px;
+    }
+
+    /* Overrides desktop style when viewport is less than 600px (for smart phones) */
+    @media only screen and (max-width: 600px) {
+        section {
+            display: block;
+        }
+
+        body {
+            margin-top: 0px;
+            margin-bottom: 100px;
+            background-image: url(images/sky_long.png);
+        }
+
+        .icons {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about, .background, .skills {
+            width: 90%;
+            height: fit-content;
+            margin: 30px auto;
+            padding: 0;
+        }
+
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+            .about > * {
+                width: 50%;
+            }
+
+        .skills, .details {
+            flex-direction: column;
+        }
+
+        .parts, .parts:nth-child(2) {
+            border: none;
+            margin: 20px;
+            width: 100%;
+        }
+
+            .parts table {
+                justify-content: center;
+            }
+
+        .details {
+            margin: 0;
+        }
+
+        footer p {
+            font-size: 30px;
+        }
+
+        footer li {
+            font-size: 15px;
+        }
+    }
+</style>
+<body>
+    <main>
+        <section>
+            <div class="icons">
+                <figure>
+                    <a href="about_me.html"><img src="images/profile_picture_click.png" alt="Profile Picture Icon" class="profile"></a>
+                    <figcaption>About Me</figcaption>
+                </figure>
+                <figure>
+                    <a href="projects.html"><img src="images/folder_icon.png" alt="Projects Folder" class="projects_folder"></a>
+                    <figcaption>Projects</figcaption>
+                </figure>
+            </div>
+            <figure class="about">
+                <div class="title">
+                    <figcaption>Me.jpg</figcaption>
+                    <figcaption class="x" onclick="this.closest('figure').style.visibility='hidden';">X</figcaption>
+                </div>
+                <img src="images/id_photo.jpg" alt="Profile Picture">
+            </figure>
+            <figure class="background">
+                <div class="title2">
+                    <p>Background.txt</p>
+                    <p class="x" onclick="document.querySelector('.background').style.visibility='hidden';">X</p>
+                </div>
+                <table>
+                    <tr>
+                        <td class="table_title">Name</td>
+                        <td class="table_des">Lia Im Viratelle (임리아)</td>
+                    </tr>
+                    <tr><td class="table_title">Education</td> <td class="table_des">The New School - Parsons School of Design (Design and Technology Major: Game Design Pathway)</td></tr>
+                    <tr><td class="table_title">Nationality</td> <td class="table_des">South Korea, France, United States</td></tr>
+                    <tr><td class="table_title">Interests</td><td class="table_des">Video games, Art, Dancing, Music, and Badminton</td></tr>
+                    <tr><td class="table_title">Introduction</td><td class="table_des">Hi! I was born in San Diego, California from a Korean mother and a French father. I lived most of my life in Seoul, South Korea and currently am in New York to attend university. I'm aiming to be a game designer as I love to play video games.</td></tr>
+                    <tr><td class="social_title">Socials</td><td class="links"><a href="mailto:viral695@newschool.edu" target="_blank"><img src="images/gmail_icon.png" alt="Gmail Icon"></a><a href="https://ddoraiiii.itch.io/" target="_blank"><img src="images/itch.io_icon.png" alt="Itch.io Icon"></a><a href="https://editor.p5js.org/liaimv/sketches" target="_blank"><img src="images/p5.js_icon.png" alt="p5.js Icon"></a></td></tr>
+                </table>
+            </figure>
+            <figure class="skills">
+                <div class="title3">
+                    <p>Skills.txt</p>
+                    <p class="x" onclick="document.querySelector('.skills').style.visibility='hidden';">X</p>
+                </div>
+                <figure class="details">
+                    <div class="parts">
+                        <h1>Softwares</h1>
+                        <table>
+                            <tr><td>Unity</td><td><img src="images/bar_high.png" alt="6/7"></td></tr>
+                            <tr><td>InDesign</td><td><img src="images/bar_high.png" alt="6/7"></td></tr>
+                            <tr><td>After Effects</td><td><img src="images/bar_high.png" alt="6/7"></td></tr>
+                            <tr><td>Blender</td><td><img src="images/bar_mid.png" alt="4/7"></td></tr>
+                            <tr><td>Photoshop</td><td><img src="images/bar_mid.png" alt="4/7"></td></tr>
+                            <tr><td>Illustrator</td><td><img src="images/bar_mid.png" alt="4/7"></td></tr>
+                        </table>
+                    </div>
+                    <div class="parts">
+                        <h1>Coding Languages</h1>
+                        <table>
+                            <tr><td>Javascript</td><td><img src="images/bar_high.png" alt="6/7"></td></tr>
+                            <tr><td>C#</td><td><img src="images/bar_midhigh.png" alt="5/7"></td></tr>
+                            <tr><td>HTML</td><td><img src="images/bar_midhigh.png" alt="5/7"></td></tr>
+                            <tr><td>CSS</td><td><img src="images/bar_midhigh.png" alt="5/7"></td></tr>
+                        </table>
+                    </div>
+                    <div class="parts">
+                        <h1>Languages</h1>
+                        <table>
+                            <tr><td>Korean</td><td><img src="images/bar_full.png" alt="7/7"></td></tr>
+                            <tr><td>English</td><td><img src="images/bar_full.png" alt="7/7"></td></tr>
+                            <tr><td>French</td><td><img src="images/bar_mid.png" alt="4/7"></td></tr>
+                        </table>
+                    </div>
+                </figure>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p><a href="index.html" class="name">lia's computer</a></p>
+        <ul>
+            <li>20:30</li>
+            <li>2003/01/03</li>
+        </ul>
+    </footer>
+</body>
+</html>
+
+
+
